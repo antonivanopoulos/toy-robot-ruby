@@ -29,6 +29,16 @@ EXIT will exit the simulator.
 
 A robot that is not on the table can choose the ignore the MOVE, LEFT, RIGHT and REPORT commands.
 
+## Installation
+The simulator runs on Ruby 2.1.1; to install everything:
+
+```
+git clone git@github.com:antonivanopoulos/toy-robot-ruby.git
+cd toy-robot-ruby
+gem install bundler
+bundle install
+```
+
 ## Usage
 
 The simulator can be starded by running `ruby simulate.rb`.
@@ -43,6 +53,7 @@ Tests can be run by running `rspec spec/`
 
 a)
 ```
+Welcome to the toy robot simulator, enter a PLACE command to begin:
 PLACE 0,0,NORTH
 MOVE
 REPORT
@@ -51,6 +62,7 @@ Output: 0,1,NORTH
 
 b)
 ```
+Welcome to the toy robot simulator, enter a PLACE command to begin:
 PLACE 0,0,NORTH
 LEFT
 REPORT
@@ -59,6 +71,7 @@ Output: 0,0,WEST
 
 c)
 ```
+Welcome to the toy robot simulator, enter a PLACE command to begin:
 PLACE 1,2,EAST
 MOVE
 MOVE
