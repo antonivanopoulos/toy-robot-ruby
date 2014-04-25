@@ -1,11 +1,7 @@
 require_relative 'lib/simulator'
 
-if ARGV.length > 0
-  puts File.read(File.dirname(__FILE__) + '/../README.md')
-  exit
-end
-
 simulator = Simulator.new
+puts "Welcome to the toy robot simulator, enter a PLACE command to begin:"
 
 command = STDIN.gets
 while command

@@ -24,6 +24,9 @@ class Simulator
       left
     when 'RIGHT'
       right
+    when 'EXIT'
+      puts "Goodbye."
+      exit
     else
       "Ignoring invalid command #{operator}."
     end
