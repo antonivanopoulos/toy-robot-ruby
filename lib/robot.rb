@@ -1,8 +1,6 @@
 class Robot
 
-  ORIENTATIONS = [:north, :south, :east, :west]
-  LEFT_MOVEMENTS = { north: :west, west: :south, south: :east, east: :north}
-  RIGHT_MOVEMENTS = { north: :east, east: :south, south: :west, west: :north}
+  ORIENTATIONS = [:north, :east, :south, :west]
 
   attr_accessor :position, :orientation
 
@@ -25,11 +23,15 @@ class Robot
   end
 
   def turn_left
-    self.orientation = LEFT_MOVEMENTS[self.orientation]
+    index = ORIENTATIONS.index(self.orientation)
+
+    self.orientation = ORIENTATIONS.rotate(-1)[index]
   end
 
   def turn_right
-    self.orientation = RIGHT_MOVEMENTS[self.orientation]
+    index = ORIENTATIONS.index(self.orientation)
+
+    self.orientation = ORIENTATIONS.rotate()[index]
   end
 
   def move
